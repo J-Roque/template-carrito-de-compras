@@ -25,7 +25,7 @@ body {
 .section1__header__nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 30px;
 }
 .section1__header__nav__busqueda li {
@@ -38,9 +38,9 @@ body {
 .section1__header__nav ul {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 .section1__header__nav ul li {
-  margin-left: 100px;
   cursor: pointer;
 }
 .section1__header__nav ul li:hover {
@@ -49,15 +49,17 @@ body {
 .section1__header__nav__login--shop {
   display: flex;
   align-items: center;
-  margin-left: 100px;
+  gap: 20px;
+  /* margin-left: 100px; */
 }
 .section1__header__nav__login--shop li {
   list-style: none;
-  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
 .section1__header__nav__login--shop li i {
-  margin-right: 10px;
+  font-size: 22px;
 }
 .section1__header__nav__login--shop li a {
   text-decoration: none;
@@ -66,11 +68,12 @@ body {
   color: #ec981a;
 }
 .section1__home {
-  width: 100%;
+  max-width: 100%;
   height: 80vh;
   background-image: url("../img/home.webp");
   background-size: cover;
   position: relative;
+  background-repeat: no-repeat;
 }
 .section1__home__redees__sociales {
   display: flex;
@@ -114,21 +117,20 @@ body {
   margin-bottom: 20px;
 }
 .section2__products {
-  margin: 20px 30px;
+  /* margin: 20px 30px; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 60px;
+  /* gap: 60px; */
 }
-.section2__products--card {
-  width: 300px;
-  height: 390px;
-  margin: auto;
+.section2__products--card{
+  margin: 10px;
+
 }
 .section2__products--card img {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 .section2__products--card p {
   text-align: center;
@@ -170,9 +172,8 @@ body {
 .footer__info {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
   margin-top: 20px;
 }
 .footer__info ul {
@@ -204,11 +205,11 @@ body {
 }
 .footer__busqueda__box input {
   width: 300px;
-  height: 30px;
+  height: 40px;
   outline: none;
 }
 .footer__busqueda__box button {
-  height: 30px;
+  height: 40px;
   padding: 0 5px 0 5px;
   background-color: #000;
   color: #fff;
@@ -216,4 +217,31 @@ body {
 body p {
   text-align: center;
   font-weight: 200;
+}
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 460px) {
+  .footer__busqueda__box {
+  }
+  .footer__busqueda__box input {
+    width: 100%;
+  }
+  .footer__busqueda__box button {
+    margin-top: 5px;
+    width: 100%;
+    outline: none;
+    border-style: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .section1__header__nav ul {
+    display: none;
+  }
+  .section1__header__nav__busqueda li {
+    display: none;
+  }
+.footer__info {
+  flex-direction: column;
+  gap: 30px;
 }
